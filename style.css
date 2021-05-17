@@ -1,0 +1,65 @@
+.container {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.calculator {
+  background-color: #e6e6e6;
+  border: 1px solid #82898e;
+  font-family: "Roboto Mono", monospace;
+  width: 300px;
+  height: 450px;
+  padding: 3px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 25px 95px 35px repeat(5, 55px);
+  grid-gap: 3px;
+}
+
+.calculator>div:not(:first-child) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator div[data-action]:hover {
+  background-color: #ccc;
+}
+
+.calculator .info {
+  grid-column: 1 / span 4;
+  color: #888;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.calculator div.screen {
+  grid-column: 1 / span 4;
+  justify-content: flex-end;
+  font-size: 2.5em;
+  padding-right: 5px;
+}
+
+.calculator div.memory {
+  grid-column: 1 / span 4;
+  align-items: stretch;
+}
+
+.calculator div.memory div {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator .action {
+  background-color: #f0f0f0;
+}
+
+.calculator .digit {
+  background-color: #fafafa;
+  font-weight: bolder;
+  font-size: 1.3em;
+}
